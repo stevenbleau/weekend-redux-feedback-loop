@@ -40,6 +40,15 @@ const support = (state = 0, action) => {
     return state;
 }
 
+const comment = (state = '', action) => {
+    if (action.type === 'SET_COMMENT') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_ALL') {
+        return '';
+    }
+    return state;
+}
+
 
 //STORE
 
@@ -50,6 +59,7 @@ const storeInstance = createStore(
             feeling,
             understanding,
             support,
+            comment,
         }
     ),
     applyMiddleware(logger)
