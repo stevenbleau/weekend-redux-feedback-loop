@@ -6,6 +6,7 @@ import StepOne from '../StepOne/StepOne.jsx';
 import StepTwo from '../StepTwo/StepTwo.jsx';
 import StepThree from '../StepThree/StepThree.jsx';
 import StepFour from '../StepFour/StepFour.jsx';
+import Summary from '../Summary/Summary.jsx';
 
 
 
@@ -37,15 +38,9 @@ function App() {
         <Route exact path="/step/four">
           <StepFour />
         </Route>
-        {/* <Route exact path="/step/three">
-          <StepThree />
-        </Route>
-        <Route exact path="/step/Four">
-          <StepFour />
-        </Route>
         <Route exact path="/step/summary">
-          <StepSummary/>
-        </Route> */}
+           <Summary/>
+        </Route>
       </div>
       </Router>
     </div>
