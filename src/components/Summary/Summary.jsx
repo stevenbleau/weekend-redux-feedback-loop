@@ -28,8 +28,9 @@ const Summary = () => {
         }).then((response) => {
             // Clear all reducers
             dispatch({ type: 'CLEAR_ALL' });
-            // Navigate to the Activity Log
-            history.push('/');
+            // Navigate to the Feedback Review
+            history.push('/step/review');
+
         }).catch((error) => {
             console.log(error);
             alert('Something went wrong!')

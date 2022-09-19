@@ -3,20 +3,20 @@ import axios from 'axios';
 import ActivityItem from './ActivityItem.jsx';
 
 function FeedbackList() {
-    let [activityList, setActivityList] = useState([]);
+    let [feedbackList, setFeedbackList] = useState([]);
 
     // On Load, fetch activity data from the server
     useEffect(() => {
         console.log('in useEffect')
-        getActivities();
+        getFeedback();
     }, []);
 
-    const getActivities = () => {
+    const getFeedback = () => {
         axios({
             method: 'GET',
-            url: '/activity'
+            url: '/feedback'
         }).then((response) => {
-            setActivityList(response.data);
+            setFeedbackList(response.data);
         }).catch((err)=>{
             console.log(err);
             alert('Something went wrong.');
@@ -26,8 +26,8 @@ function FeedbackList() {
     return (
         <div>
             {
-                activityList.map(item => (
-                    <ActivityItem key={item.id} activity={item} getActivities={getActivities} />
+                feedbackList.map(item => (
+                    <ActivityItem key={item.id} fe={item} getActivities={getActivities} />
                 ))
             }
         </div>
