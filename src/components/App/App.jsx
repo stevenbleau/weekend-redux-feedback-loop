@@ -4,6 +4,8 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import StepOne from '../StepOne/StepOne.jsx';
 import StepTwo from '../StepTwo/StepTwo.jsx';
+import StepThree from '../StepThree/StepThree.jsx';
+
 
 
 function App() {
@@ -26,6 +28,9 @@ function App() {
 
         <Route exact path="/step/two">
           <StepTwo />
+        </Route>
+        <Route exact path="/step/three">
+          <StepThree />
         </Route>
         {/* <Route exact path="/step/three">
           <StepThree />
