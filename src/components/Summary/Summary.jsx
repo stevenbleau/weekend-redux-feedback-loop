@@ -12,6 +12,7 @@ const Summary = () => {
     const support = useSelector(store => store.support); // getter
     const comment = useSelector(store => store.comment); // getter
     const dispatch = useDispatch();
+    console.log(history, feeling, understanding, comment );
 
     // Pass the data to the server
     const handleSubmit = () => {
@@ -21,7 +22,7 @@ const Summary = () => {
             data: {
                 feeling: feeling,
                 understanding: understanding,
-                suuport: support,
+                support: support,
                 comment: comment,
             }
         }).then((response) => {
